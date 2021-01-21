@@ -1,0 +1,183 @@
+					<!DOCTYPE HTML>
+					<html>
+						<head>
+							<title>GestionDeFormation</title>
+							<meta charset="utf-8" />
+							<meta name="viewport" content="width=device-width, initial-scale=1" />
+					<style>
+							html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+							margin: 0;
+							padding: 0;
+							border: 0;
+							font-size: 100%;
+							font: inherit;
+							vertical-align: baseline;
+						}
+					
+					
+						@media screen and (max-width: 480px) {
+					
+							html, body {
+								min-width: 320px;
+							}
+					
+						}
+					
+						body {
+							background: #fff;
+						}
+					
+					
+						body {
+							background-color: #fff;
+							color: #444;
+						}
+					
+						body, input, select, textarea {
+							font-family: "Lato", Arial, Helvetica, sans-serif;
+							font-size: 16pt;
+							font-weight: 300;
+							line-height: 1.75;
+						}
+					
+							@media screen and (max-width: 1680px) {
+					
+								body, input, select, textarea {
+									font-size: 13pt;
+								}
+					
+							}
+					
+							@media screen and (max-width: 1280px) {
+					
+								body, input, select, textarea {
+									font-size: 12pt;
+								}
+					
+							}
+					
+					/* Button */
+						input[type="button"],
+						button,
+						.button {
+							border-radius: 0;
+							border: 0;
+							cursor: pointer;
+							display: inline-block;
+							font-weight: 700;
+							height: 3em;
+							line-height: 3em;
+							padding: 0 2.5em;
+							text-align: center;
+							text-decoration: none;
+							white-space: nowrap;
+						}
+					/* Header */
+						body {
+							padding-top: 4.125em;
+						}
+						#header {
+							background: #1c1c1c;
+							color: rgba(255, 255, 255, 0.75);
+							cursor: default;
+							height: 4.25em;
+							left: 0;
+							line-height: 4.25em;
+							position: fixed;
+							text-align: right;
+							top: 0;
+							width: 100%;
+							z-index: 10001;
+						}
+					
+							#header .logo {
+								display: inline-block;
+								height: inherit;
+								left: 1.25em;
+								line-height: inherit;
+								margin: 0;
+								padding: 0;
+								position: absolute;
+								top: 0;
+								color: #fff;
+								font-size: 1.25em;
+								text-decoration: none;
+							}
+						@media screen and (max-width: 480px) {
+					
+							#header {
+								min-width: 320px;
+							}
+					
+						}
+					/* Banner */
+					
+						#banner {
+							background-color: #3498db;
+							color: rgba(255, 255, 255, 0.75);
+							text-align: center;
+							cursor: default;
+							padding: 10em 4em 9em 4em;
+							height: 330px;
+						}
+					
+					
+							#banner a {
+								color: #fff;
+							}
+					
+							#banner strong, #banner b {
+								color: #fff;
+							}
+					
+							#banner h1, #banner h2, #banner h3, #banner h4, #banner h5, #banner h6 {
+								color: #fff;
+							}
+					
+								#banner input[type="button"].alt,
+								#banner button.alt,
+								#banner .button.alt {
+									background-color: transparent;
+									box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.25);
+									color: #fff !important;
+								}
+									#banner input[type="button"].alt:hover,
+									#banner button.alt:hover,
+									#banner .button.alt:hover {
+										background-color: rgba(255, 255, 255, 0.075);
+									}
+					
+						
+							#banner h1 {
+								font-size: 3em;
+								line-height: 1.45;
+								margin: 0 0 0.75em 0;
+							}
+					
+					
+					
+					
+					</style>
+						</head>
+						<body>
+					
+							<!-- Header -->
+							<% row.forEach(function(item, index){ %>
+								<header id="header">
+									<a href="#" class="logo"><strong>Gestion de Formation</strong></a>
+								</header>					
+							<!-- Banner -->
+								<section id="banner">
+									<div class="inner">
+
+										<p style="font-size: 23px;">Session de <%= item.Mois%>/<%= item.annee%></p>
+										<h1>Formation de <a href="#"><%= item.formation %></a></h1>
+										<ul class="actions">
+											<li><a href="#" class="button alt scrolly big">Continue</a></li>
+										</ul>
+									</div>
+								</section>
+								<% }); %>
+					
+						</body>
+					</html>
